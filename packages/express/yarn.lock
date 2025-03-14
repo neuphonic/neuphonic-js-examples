@@ -127,10 +127,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.1.tgz#7d79922cb2d88f9048f06393dbf62d2e4accb584"
   integrity sha512-Y1EQdcfwMSeQN/ujR5VayLOJ1BHaK+ssyk0AEzPjC+t1lITgsnccPqFjb6V+LsTp/9Iov4ysfjxLaGJ9RPtkVg==
 
-"@neuphonic/neuphonic-js@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@neuphonic/neuphonic-js/-/neuphonic-js-0.2.0.tgz#c8f20c6330be0c463d78b56bb2022ba9ecf97fb3"
-  integrity sha512-xGoKwi+yt8FzcFHC+Gkj22LNR1c/AcZZUlDR9I3ywTbV59UiXYFPiF6oP66p3lMPNj7SdYqDFj/lFgD7km6bgw==
+"@neuphonic/neuphonic-js@0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@neuphonic/neuphonic-js/-/neuphonic-js-0.2.4.tgz#e95399557747b19a59e1b9247259809d6f541d57"
+  integrity sha512-Utt+yyFXZnjdh54GcZsEoy+nUd/zrHStrsjduAyDZ6RRHKUHYHQXLBgtXl+qH/RdVVpSInxZEqUjlecaWMX64Q==
   dependencies:
     dotenv "^16.3.1"
     eventsource "^3.0.5"
