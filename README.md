@@ -22,7 +22,7 @@ This is an example of a Node.js Express application demonstrating how to use the
 
 ## Running the application
 
-Copy your API key into `.env` andsStart the server with:
+Copy your API key into `.env` ands start the server with:
 
 ```bash
 yarn dev
@@ -34,3 +34,19 @@ yarn dev
 - GET /restorations - Retrieves a list of active restoration jobs.
 - GET /ws - Streams synthesized speech using WebSockets.
 - GET /sse - Streams synthesized speech using Server-Sent Events (SSE).
+
+# NextJS application
+
+And example of using Neuphonic Agents API with NextJS.
+
+## Running the application
+
+To get started, create one or more agents in your Neuphonic dashboard.
+
+Copy your API key into `.env` ands start the server with:
+
+```bash
+yarn dev
+```
+
+When the app launches, you'll see your list of agents. Click an agent to open the chat window and start a conversation.
