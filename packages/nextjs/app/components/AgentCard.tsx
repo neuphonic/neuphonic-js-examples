@@ -18,7 +18,7 @@ export function AgentCard({
 }) {
   return (
     <Link href={`/talk/${id}`}>
-      <div className="w-[225px] rounded-3xl overflow-hidden relative bg-black shadow-xl cursor-pointer">
+      <div className="w-[225px] overflow-hidden rounded-xl border border-gray-800 bg-gray-900 shadow-lg transition-all duration-300 hover:border-purple-500 hover:shadow-purple-900/20 hover:shadow-xl">
         <div className="relative aspect-square flex">
           <div className="absolute inset-0">
             <Image src={image} alt="" />

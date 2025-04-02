@@ -37,11 +37,9 @@ yarn dev
 
 # NextJS application
 
-And example of using Neuphonic Agents API with NextJS.
+An example of using Neuphonic TTS and Agents API with NextJS.
 
 ## Running the application
-
-To get started, create one or more agents in your Neuphonic dashboard.
 
 Copy your API key into `.env` ands start the server with:
 
@@ -49,4 +47,5 @@ Copy your API key into `.env` ands start the server with:
 yarn dev
 ```
 
-When the app launches, you'll see your list of agents. Click an agent to open the chat window and start a conversation.
+When the app launches, you'll see page with the links to TTS and Agents examples.
+To see the agents create one or more agents in your Neuphonic dashboard.

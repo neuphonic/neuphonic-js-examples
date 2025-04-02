@@ -2,7 +2,7 @@ import { VoiceChat } from '@/app/components/VoiceChat';
 import { getClient } from '@/app/neuphonic';
 import { agentsSettings } from '@/app/constants';
 
-export default async function Talk({
+export default async function TalkPage({
   params
 }: {
   params: Promise<{ id: string }>;

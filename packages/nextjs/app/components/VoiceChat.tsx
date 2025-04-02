@@ -1,12 +1,12 @@
 'use client';
 
-import { WsErr } from '@neuphonic/neuphonic-js/browser';
+import { Agent, WsErr } from '@neuphonic/neuphonic-js/browser';
 
 import Image, { StaticImageData } from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import { Mic, MicOff } from 'lucide-react';
 
-import { getClient } from '../neuphonicBrowser';
+import { getBrowserClient } from '../neuphonicBrowser';
 
 type MessageType = {
   id: string;
@@ -63,9 +63,7 @@ export const VoiceChat = ({
   headerName: string;
   headerAvatar: StaticImageData;
 }) => {
-  const agent = useRef(
-    getClient().createAgent({ agent_id: agentId, jwt_token: jwtToken })
-  );
+  const agent = useRef<Agent>(null);
   const [isConnecting, setIsConnecting] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -79,7 +77,7 @@ export const VoiceChat = ({
   const toggleConnection = async () => {
     if (isConnected) {
       setIsConnecting(true);
-      await agent.current.stop();
+      await agent.current?.stop();
       setIsConnecting(false);
       setIsConnected(false);
       addMessage('Disconnected from voice chat.', 'assistant');
@@ -87,6 +85,12 @@ export const VoiceChat = ({
       setIsConnecting(true);
 
       try {
+        if (!agent.current) {
+          agent.current = getBrowserClient(jwtToken).createAgent({
+            agent_id: agentId
+          });
+        }
+
         const chat = await agent.current.start();
 
         chat.onText((role, text) => {
@@ -133,6 +137,12 @@ export const VoiceChat = ({
       }
     }
   };
+
+  useEffect(() => {
+    return () => {
+      agent.current?.stop();
+    };
+  }, []);
 
   const addMessage = (
     content: string,
