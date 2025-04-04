@@ -18,10 +18,10 @@ app.get('/voices', async (req: Request, res: Response) => {
   res.json(voices);
 });
 
-app.get('/restorations', async (req: Request, res: Response) => {
-  const jobs = await client.restorations.list();
+app.get('/agents', async (req: Request, res: Response) => {
+  const agents = await client.agents.list();
 
-  res.json(jobs);
+  res.json(agents);
 });
 
 app.get('/ws', async (req, res) => {
