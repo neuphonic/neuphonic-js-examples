@@ -930,8 +930,8 @@
     "@emnapi/runtime" "^1.3.1"
     "@tybys/wasm-util" "^0.9.0"
 
-"@neuphonic/neuphonic-js@0.7.1", "@neuphonic/neuphonic-js@file:../neuphonic-js":
-  version "0.7.1"
+"@neuphonic/neuphonic-js@0.7.2":
+  version "0.7.2"
   dependencies:
     dotenv "^16.3.1"
     eventsource "^3.0.5"
