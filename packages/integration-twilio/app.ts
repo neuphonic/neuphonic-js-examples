@@ -56,7 +56,8 @@ wss.on('connection', async (socket: WebSocket) => {
       incoming_mode: 'text'
     },
     {
-      sampling_rate: 8000
+      sampling_rate: 8000,
+      voice_id: 'fc854436-2dac-4d21-aa69-ae17b54e98eb'
     }
   );
 

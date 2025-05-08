@@ -86,9 +86,14 @@ export const VoiceChat = ({
 
       try {
         if (!agent.current) {
-          agent.current = getBrowserClient(jwtToken).createAgent({
-            agent_id: agentId
-          });
+          agent.current = getBrowserClient(jwtToken).createAgent(
+            {
+              agent_id: agentId
+            },
+            {
+              voice_id: 'fc854436-2dac-4d21-aa69-ae17b54e98eb'
+            }
+          );
         }
 
         const chat = await agent.current.start();
