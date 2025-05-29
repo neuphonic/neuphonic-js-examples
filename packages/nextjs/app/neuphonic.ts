@@ -7,7 +7,11 @@ export const getClient = () => {
     return client;
   }
 
-  client = createClient({ apiKey: process.env.NEXT_NEUPHONIC_API_KEY });
+  client = createClient({
+    apiKey: process.env.NEXT_NEUPHONIC_API_KEY,
+    baseURL: process.env.NEXT_PUBLIC_NEUPHONIC_BASE_URL,
+    baseHttp: !!process.env.NEXT_PUBLIC_NEUPHONIC_BASE_HTTP
+  });
 
   return client;
 };
