@@ -88,7 +88,8 @@ export const VoiceChat = ({
         if (!agent.current) {
           agent.current = getBrowserClient(jwtToken).createAgent(
             {
-              agent_id: agentId
+              agent_id: agentId,
+              // mcp_servers: ['https://9ccfd88d8e8d.ngrok-free.app/sse']
             },
             {
               voice_id: 'fc854436-2dac-4d21-aa69-ae17b54e98eb'
