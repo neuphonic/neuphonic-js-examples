@@ -49,3 +49,13 @@ yarn dev
 
 When the app launches, you'll see page with the links to TTS and Agents examples.
 To see the agents create one or more agents in your Neuphonic dashboard.
+
+## Connecting to MCP server
+
+Check the simple MCP server at `packages/mcp-server`. You can run it and connect the agents. Try modifying the agent code in `packages/nextjs/app/components/VoiceChat.tsx:92` and uncommenting `mcp_servers`.
+
+# Integrations
+
+## Twilio
+
+Check instructions in `packages/integration-twilio`.
