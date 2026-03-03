@@ -29,11 +29,12 @@ export const Tts = ({
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [selectedLanguage, setSelectedLanguage] = useState('en');
-  const [selectedVoice, setSelectedVoice] = useState('fc854436-2dac-4d21-aa69-ae17b54e98eb');
 
   const filteredVoices = voices.filter(
     (voice) => voice.lang_code === selectedLanguage
   );
+
+  const [selectedVoice, setSelectedVoice] = useState(filteredVoices.find(voice => voice.name === 'Jack')?.id);
 
   const [outputFormat, setOutputFormat] = useState<'mp3' | 'wav'>('wav');
   const [sampleRate, setSampleRate] = useState<22050 | 16000 | 8000>(22050);
@@ -50,7 +51,8 @@ export const Tts = ({
     }
 
     if (!player.current) {
-      player.current = await client.current.player({
+      player.current = await client.current.player();
+      await player.current.connect({
         voice_id: selectedVoice,
         lang_code: selectedLanguage,
         output_format: outputFormat,

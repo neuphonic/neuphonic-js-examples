@@ -498,6 +498,17 @@
     "@emnapi/runtime" "^1.4.3"
     "@tybys/wasm-util" "^0.10.0"
 
+"@neuphonic/neuphonic-js@0.10.0", "@neuphonic/neuphonic-js@file:../neuphonic-js":
+  version "0.10.0"
+  dependencies:
+    dotenv "^16.3.1"
+    eventsource "^3.0.5"
+    isomorphic-ws "5.0.0"
+    js-base64 "^3.7.7"
+    node-fetch "^3.3.2"
+    ws "^8.18.1"
+    zod "^3.24.2"
+
 "@neuphonic/neuphonic-js@0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@neuphonic/neuphonic-js/-/neuphonic-js-0.9.0.tgz#413891d8e6f7b51f3a8728a117a052606e5d236e"
@@ -511,34 +522,10 @@
     ws "^8.18.1"
     zod "^3.24.2"
 
-"@neuphonic/neuphonic-js@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@neuphonic/neuphonic-js/-/neuphonic-js-0.9.5.tgz#24d9631a3b4a02d594b1eeea40df8e95b16b024f"
-  integrity sha512-C+d0PkcQpnMY6udPtNFlcVCgpMR4lzPl4SsaIrIBIrztku9+HjDjBIt+CIXWgmwVmTbXRt5WbDCNoUYknLCgDA==
-  dependencies:
-    dotenv "^16.3.1"
-    eventsource "^3.0.5"
-    isomorphic-ws "5.0.0"
-    js-base64 "^3.7.7"
-    node-fetch "^3.3.2"
-    ws "^8.18.1"
-    zod "^3.24.2"
-
 "@neuphonic/neuphonic-js@^0.8.0":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@neuphonic/neuphonic-js/-/neuphonic-js-0.8.1.tgz#7c8a736dc9d58c000528a8b50594deedddc825d2"
   integrity sha512-G4M7PXP33xMvNhNd22jaAD/Z0Fd+0yvjOzNfHV3IXojIHL51dex2wEwn1+PmHbJnY6ETokRnj1C4326s1MArAg==
-  dependencies:
-    dotenv "^16.3.1"
-    eventsource "^3.0.5"
-    isomorphic-ws "5.0.0"
-    js-base64 "^3.7.7"
-    node-fetch "^3.3.2"
-    ws "^8.18.1"
-    zod "^3.24.2"
-
-"@neuphonic/neuphonic-js@file:../neuphonic-js":
-  version "0.9.6"
   dependencies:
     dotenv "^16.3.1"
     eventsource "^3.0.5"
