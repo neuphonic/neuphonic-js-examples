@@ -11,7 +11,7 @@ const classNames = (...classes: (string | boolean | undefined)[]) => {
 };
 
 const outputFormats = ['wav', 'mp3'] as const;
-const sampleRates = [22050, 16000, 8000] as const;
+const sampleRates = [24000, 22050, 16000, 8000] as const;
 
 export const Tts = ({
   jwtToken,
@@ -37,7 +37,7 @@ export const Tts = ({
   const [selectedVoice, setSelectedVoice] = useState(filteredVoices.find(voice => voice.name === 'Jack')?.id);
 
   const [outputFormat, setOutputFormat] = useState<'mp3' | 'wav'>('wav');
-  const [sampleRate, setSampleRate] = useState<22050 | 16000 | 8000>(22050);
+  const [sampleRate, setSampleRate] = useState<typeof sampleRates[number]>(24000);
 
   const handlePlay = async () => {
     if (text.trim() === '') {
